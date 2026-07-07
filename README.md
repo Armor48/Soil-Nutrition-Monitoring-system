@@ -97,7 +97,7 @@ Open a browser and enter the displayed IP address (printed in Serial Monitor).
 Default IP: 192.168.4.1 (Check Serial Monitor upon boot).
 View the dashboard showing Nitrogen, Phosphorous, and Potassium values.
 
-###💻 Key Functions Explanation
+### 💻 Key Functions Explanation
 nitrogen() / phosphorous() / potassium():
 Send specific Modbus request codes to the sensor and retrieve 1-byte values representing mg/kg concentration.
 setup():
@@ -107,24 +107,25 @@ Continuously polls the sensor three times (one per nutrient), updates the serial
 handleRoot():
 Serves the custom HTML/CSS page containing the dashboard UI when the root URL is accessed.
 
-###🧠 Limitations & Troubleshooting
+### 🧠 Limitations & Troubleshooting
 Sensor Communication: If values read as 0 or strange hex numbers, ensure the A/B (485) wires are not swapped and power supply (5V) is stable.
 OLED Not Showing: Verify SPI pins (23, 18, 5, 16, 17) are correct for your specific board. Some ESP32 modules require GND toggling for reset.
 IP Address: If the IP does not appear in Serial, try resetting the board. It prints AP IP address: at startup.
 
-###🏆 Credits
+### 🏆 Credits
 Developed for Academic Purposes.
 
 Developer: Priyanshu Kumar
 Institution: NIMS University Rajasthan, Jaipur
 Department: Agricultural Engineering
 Year: 2024
-📜 License
+
+### 📜 License
 This project is open-source software. See the LICENSE file in the root directory for details.
 
 If you find this helpful for your agricultural engineering projects, please give a ⭐ Star to support the team!</strong> </p> ```
 
-###💡 Pro-Tips for You:
+### 💡 Pro-Tips for You:
 Library Manager: When uploading, make sure to tell your IDE to auto-install the missing libraries if they aren't there yet.
 Voltage: The NPK sensors often require 5V to drive the RS485 chip properly. Ensure your ESP32 5V pin (Vin) is being used for the sensor power if possible.
 HTML Images: In the handleRoot() function, there is a reference to .sensor img { width: 100px... }, but no actual images are included in the HTML. I added comments in the README suggesting where to add icons if you want to upload assets later.
